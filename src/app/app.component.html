@@ -1,0 +1,40 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+     {{ title }}
+  </h1>
+</div>
+
+<!-- vertical-timeline>
+
+  <!-- Add some cards to the timeline. It works with *ngFor too -->
+
+  <!-- If no value is passed for the date, the current time is used. -->
+
+  <!-- tomorrow = new Date(2017, 9, 20, 14,34); -->
+  <!-- vertical-timeline-card *ngFor="let day of calendar" [dateValue]="day.fecha">
+    <pre>{{day| json:2}}</pre>
+    < div *ngFor="let f of day.feriado">
+      <h1 *ngIf="f.dia === day.dia">{{f.motivo}}</h1>
+    </div >
+  </vertical-timeline-card>
+
+</vertical-timeline -->
+<mgl-timeline>
+    <mgl-timeline-entry *ngFor="let day of calendario; let index = index">
+        <mgl-timeline-entry-header [ngStyle]="{'background-color': day.dia === 1 ? '#80d4ff' : '', 'cursor': 'pointer'}" *ngIf="day.dia === 1">
+          <mat-card><h2>{{day.meses.month}}</h2></mat-card></mgl-timeline-entry-header>
+
+        <mgl-timeline-entry-header [ngStyle]="{'background-color': day.feriado.length >0 ? '#ff5c33' : '#80ff80', 'cursor': 'pointer'}" *ngIf="index != 0">
+          <mat-card><h1>{{day.fecha}}</h1></mat-card></mgl-timeline-entry-header>
+        <mgl-timeline-entry-content class="color">
+          <div *ngFor="let f of day.feriado">
+            <mat-card>
+                <h2 class="motivo">{{f.motivo}}</h2>
+            </mat-card>
+          </div>
+        </mgl-timeline-entry-content>
+        <mgl-timeline-entry-dot class="dot"></mgl-timeline-entry-dot>
+    </mgl-timeline-entry>
+</mgl-timeline>
+

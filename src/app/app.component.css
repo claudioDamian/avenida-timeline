@@ -1,0 +1,40 @@
+.color {
+  background-color: #e6ff99;
+}
+.dot {
+  background-color: #ff1a1a;
+}
+.mgl-timeline-entry-card {
+
+}
+h2 {
+   color: #4565f5;
+   font-family: 'Raleway',sans-serif;
+   font-size: 30px;
+   font-weight: 800;
+   line-height: 17px;
+   margin: 0 0 12px;
+   text-align: center;
+   text-transform: uppercase;
+   }
+
+h1 {
+  font-family: 'Enriqueta', arial, serif;
+  line-height: 1.25;
+  margin: 0 0 10px;
+  font-size: 27px;
+  font-weight: bold;
+}
+.motivo {
+  color: #ea1d1d;
+  font-family: 'Righteous', cursive;
+  font-size: 42px;
+  font-weight: normal;
+  line-height: 60px;
+  margin: 10px 0 20px;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 0 #000;
+   margin: 10px 0 24px;
+  text-align: center;
+}
+
